@@ -4,6 +4,9 @@ const Order = mongoose.model("Order");
 module.exports = {
     create,
     addToCart,
+    updateCart,
+    checkout
+
 }
 
 async function create(req, res) {
@@ -20,3 +23,20 @@ async function addToCart(req, res) {
     await cart.addItemToCart(req.params.id);
     res.json(cart);
   }
+
+ 
+async function updateCart(req, res) {
+    const updatedCart = await Order.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.status(200).json(updatedCart);
+  }
+
+  async function checkout(req, res) {
+    // Update the cart's isPaid property to true
+    const cart = await Order.getCart(req.user._id);
+    cart.isPaid = true;
+    await cart.save(); 
+    res.json(cart);
+  }
+  
