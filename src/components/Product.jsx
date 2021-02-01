@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Header from './Header'
-import brovia from '../assert/images/brovia-barolo-villero-piedmont-italy.png'
 import Button from './Button'
 import Footer from './Footer'
 

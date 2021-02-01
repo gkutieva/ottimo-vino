@@ -1,17 +1,12 @@
 
 import React, { useContext, useEffect, useState } from 'react'
 import Header from './Header'
-import exceptionalWines from '../assert/images/exceptional-wines.png'
-import { RedWine, WhiteWine, RoseName } from '../App';
 import Footer from './Footer';
 import Button from './Button';
 
 
 const Home = (props) => {
 
-    const redWineData = useContext(RedWine);
-    const whiteWhineData = useContext(WhiteWine);
-    const roseWineData = useContext(RoseName);
     let cart = [];
     let data = [];
     useEffect(() => {
@@ -158,7 +153,7 @@ const Home = (props) => {
                                 <hr className="test_hr m-auto" />
 
                                 <div className="test_pm">
-                                    <p className="test_p">Kira jones</p>
+                                    <p className="test_p">Kira Jones</p>
                                     <hr className="test_hr2 m-auto" />
                                     <div className="test-center">
                                         <p className="test_p2">I love your products and the customer support that your wonderful team provides. It means a lot to know that all your inquiries are taken care of. Thanks for your great work!”</p>
