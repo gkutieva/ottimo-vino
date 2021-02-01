@@ -10,7 +10,7 @@ import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
 
 export default function NewOrderPage({user, setUser}) {
-  const [VinoItems, setVinoItems] = useState([]);
+  const [vinoItems, setVinoItems] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);
   const categoriesRef = useRef([]);
@@ -64,7 +64,7 @@ export default function NewOrderPage({user, setUser}) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <VinoList
-       VinoItems={VinoItems.filter(item => item.category.name === activeCat)}
+       vinoItems={vinoItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
       />
       <OrderDetail

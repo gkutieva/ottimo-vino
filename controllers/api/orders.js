@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-const Order = mongoose.model("Order");
+const Order = require('../../models/order');
 
 module.exports = {
     create,
