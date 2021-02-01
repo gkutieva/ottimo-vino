@@ -24,7 +24,6 @@ async function addToCart(req, res) {
     res.json(cart);
   }
 
- 
 async function updateCart(req, res) {
     const updatedCart = await Order.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
