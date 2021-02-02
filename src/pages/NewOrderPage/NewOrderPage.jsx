@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import * as itemAPI from '../../utilities/items-api';
+import * as itemAPI from '../../utilities/vinos-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import { Link, useHistory } from 'react-router-dom';
@@ -7,6 +7,7 @@ import VinoList from '../../components/VinoList/VinoList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import './NewOrderPage.css';
+import Address from '../../components/Address/Address';
 
 
 export default function NewOrderPage({user, setUser}) {
@@ -72,6 +73,9 @@ export default function NewOrderPage({user, setUser}) {
         order={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
+      />
+      <Address 
+      exact path='/adress' component={Address}
       />
     </main>
   );
