@@ -1,20 +1,20 @@
 const Order = require('../../models/order');
 
 module.exports = {
-    create,
+    cart,
     addToCart,
     updateCart,
+    setItemQtyInCart,
     checkout
 
 }
 
-async function create(req, res) {
-    if (!req.body) {
-        return res.status(400).send({
-            message: "Cart content can not be empty"
-        });
-    }
+async function cart(req, res) {
+  // A cart is the unpaid order for a user
+  const cart = await Order.getCart(req.user._id);
+  res.json(cart);
 }
+
 
 async function addToCart(req, res) {
     // Add the item to the cart
@@ -29,6 +29,13 @@ async function updateCart(req, res) {
     });
     res.status(200).json(updatedCart);
   }
+
+  // Updates an item in the cart's qty
+async function setItemQtyInCart(req, res) {
+  const cart = await Order.getCart(req.user._id);
+  await cart.setItemQty(req.body.itemId, req.body.newQty); 
+  res.json(cart);
+}
 
   async function checkout(req, res) {
     // Update the cart's isPaid property to true
