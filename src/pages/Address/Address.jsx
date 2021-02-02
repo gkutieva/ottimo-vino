@@ -88,7 +88,7 @@ export default function Address() {
                                 </div>
                                 <div class="text-center mar_btn">
                                     <a href="" class="continue">CONTINUE</a>
-                                </div>
+                                 </div>
                             </form>
                         </div>
                     </div>
@@ -117,8 +117,7 @@ export default function Address() {
                     }
 
                     {confirm && <div id="Tokyo" class="tabcontent">
-                        <h3>Tokyo</h3>
-                        <p>Tokyo is the capital of Japan.</p>
+                        <p>Your order has been confirmed</p>
                     </div>
                     }
 

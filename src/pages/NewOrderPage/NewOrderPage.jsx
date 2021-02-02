@@ -7,58 +7,16 @@ import VinoList from '../../components/VinoList/VinoList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import './NewOrderPage.css';
-import Address from '../../components/Address/Address';
+// import Address from '../../components/Address/Address';
 
 
-export default function NewOrderPage({user, setUser}) {
-  const [vinoItems, setVinoItems] = useState([]);
-  const [activeCat, setActiveCat] = useState('');
-  const [cart, setCart] = useState(null);
-  const categoriesRef = useRef([]);
-  const history = useHistory();
-
-  useEffect(function () {
-    async function getItems() {
-       const items = await itemAPI.getAll();
-
-      categoriesRef.current = items?.reduce((cats, item) => {
-        const cat = item?.category.name;
-        return cats.includes(cat) ? cats : [...cats, cat];
-      }, []);
-      setVinoItems(items);
-      setActiveCat(items[0]?.category.name);
-    }
-    getItems();
-
-    // // load the user's cart
-    async function getCart() {
-      const cart = await ordersAPI.getCart();
-      setCart(cart);
-    }
-    getCart();
-  }, []);
-
-  // /*--- Event Handlers --- */
-  async function handleAddToOrder(itemId) {
-    const cart = await ordersAPI.addItemToCart(itemId);
-    setCart(cart);
-  }
-
-  async function handleChangeQty(itemId, newQty) {
-    const cart = await ordersAPI.setItemQtyInCart(itemId, newQty);
-    setCart(cart);
-  }
-
-  async function handleCheckout() {
-    await ordersAPI.checkout();
-    history.push('/orders');
-  }
-
+export default function NewOrderPage({user, setUser, vinoItems, activeCat, setActiveCat, cart, handleAddToOrder, handleChangeQty, handleCheckout, categories}) {
+ 
   return (
     <main className="NewOrderPage">
       <aside>
         <CategoryList
-          categories={categoriesRef.current}
+          categories={categories.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
@@ -74,9 +32,9 @@ export default function NewOrderPage({user, setUser}) {
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
       />
-      <Address 
-      exact path='/adress' component={Address}
-      />
+      {/* <Address 
+      exact path='/adress' component={Address} */}
+      
     </main>
   );
 
