@@ -6,7 +6,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
     // If there is no order, adios
     if (!order) return null;
   
-    const lineItems = order.lineItems.map(item =>
+    const lineItems = order.lineVinos.map(item =>
       <LineItem
         lineItem={item}
         isPaid={order.isPaid}
@@ -14,7 +14,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
         key={item._id}
       />
     );
-
+    console.log(order);
     return (
         <div className="OrderDetail">
           <div className="section-heading">
@@ -44,7 +44,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 </section>
               </>
               :
-              <div className="thirsty">Are you thirsty already?</div>
+              <div className="thirsty">Aren't you thirsty already?</div>
             }
           </div>
         </div>

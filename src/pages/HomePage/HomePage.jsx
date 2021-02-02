@@ -1,17 +1,19 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import './HomePage.css';
-
+import NewOrderPage from '../NewOrderPage/NewOrderPage';
 
 
 export default function HomePage() {
-   return (
-       <>
-          <section className="banner">
+    return (
+        <>
+        <NewOrderPage />
+
+            <section className="banner">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-12 ">
-                        <img src='https://imgur.com/PB3D3ne.png' alt='one' />
+                            <img src='https://imgur.com/PB3D3ne.png' alt='one' />
                             <h2 className="harmony">FEEL THE HARMONY <br /> WITHIN A SINGLE <br /> GLASS </h2>
                             <div>
                                 <a href="#shop-wines" className="harmony_shop">SHOP WINES <span className="arrow">&#8594;</span></a>
@@ -76,7 +78,7 @@ export default function HomePage() {
                 </div>
             </section>
             <Footer />
-       </>
-   )
+        </>
+    )
 
 }

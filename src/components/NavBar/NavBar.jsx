@@ -10,13 +10,13 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <NavLink exact to="/orders">Order History</NavLink>
+      <NavLink to="/orders">Order History</NavLink>
       &nbsp; | &nbsp;
-      <NavLink exact to="/orders/new">New Order</NavLink>
+      <NavLink  to="/orders/new">New Order</NavLink>
       &nbsp; | &nbsp;
-      <NavLink exact to="/address">Address</NavLink>
+      <NavLink  to="/address">Address</NavLink>
       &nbsp; | &nbsp;
-      <span>Welcome, {user.name}</span>
+      {user && <span>Welcome, {user.name}</span>}
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );

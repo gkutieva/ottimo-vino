@@ -1,6 +1,7 @@
 import './VinoListItem.css';
 
 export default function VinoListItem({ vinoItem, handleAddToOrder }) {
+  console.log(vinoItem);
   return (
     <>
     <div className="VinoListItem">

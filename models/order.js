@@ -54,13 +54,14 @@ orderSchema.methods.addVinoToCart = async function (vinoId) {
   const cart = this;
   // Check if the item already exists in the cart
   const lineVino = cart.lineVinos.find(lineVino => lineVino.item._id.equals(vinoId));
+  console.log(lineVino);
   if (lineVino) {
     // It already exists, so increase the qty
     lineVino.qty += 1;
   } else {
     // Get the item from the "catalog"
-    const item = await mongoose.model('Vino').findById(vinoId);
-    cart.lineVinos.push({ vino });
+    const vino = await mongoose.model('Vino').findById(vinoId);
+    cart.lineVinos.push({ qty: 1, item: vino });
   }
   // return the save() method's promise
   return cart.save();
