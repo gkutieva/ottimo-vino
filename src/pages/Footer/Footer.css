@@ -1,0 +1,99 @@
+.bg_black {
+    background: black;
+}
+.foot_h3 {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Vidaloka';
+    margin-bottom: 17px;
+}
+.foot_cond p {
+    font-size: 15.5px;
+    color: #ffffff63;
+    font-weight: 300;
+    line-height: 1.9;
+}
+.foot_w {
+    width: 80%;
+}
+p {
+    margin: 0 0 10px;
+}
+
+.ul_li {
+    padding: 0;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.foot_add {
+    margin-bottom: 20px;
+}
+.foot_add p {
+    line-height: 1.7;
+}
+.foot_cond p {
+    font-size: 15.5px;
+    color: #ffffff63;
+    font-weight: 300;
+    line-height: 1.9;
+}
+.foot_col {
+    color: #ffffff63;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+@media (min-width: 992px)
+{.col-md-5 {
+    width: 41.66666667%;
+}
+}
+@media (min-width: 992px){
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;}
+}
+.ul_li li {
+    font-size: 16.5px;
+    color: #ffffff63;
+    list-style: none;
+    line-height: 2;
+}
+p {
+    margin: 0 0 10px;
+}
+.footer-main {
+    /* position: fixed; */
+    bottom: 0;
+}
+
+.footer-second {
+    background: #171A1C;
+    border-top: 2px solid #5F6062;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.footer-icon {
+    color: white!important;
+    padding: 10px;
+}
+
+
+.footer-icon i {
+    border: 2px solid #5F6062;
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin-right: 14px;
+}
+
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}

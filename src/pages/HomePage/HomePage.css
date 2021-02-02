@@ -1,0 +1,150 @@
+
+.banner{
+    position: relative;
+    background: url("https://imgur.com/PB3D3ne.png");
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0 200px;
+    
+
+}
+
+.button-brow{
+    background: #b0976d;
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 15%);
+    padding: 10px;
+  }
+  .button-brow:hover{
+    border: none;
+  }
+  
+
+.harmony{
+    font-weight: 400;
+    font-family: 'Vidaloka', serif;   
+  }
+
+  .banner h2{
+    line-height: 1.2;
+    margin: 0;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 54px;
+}
+
+.harmony_shop{
+    color: #B0976D;
+      padding: 25px 0px 25px 38px;
+      font-size: 23px;   
+      background: #000;
+  }
+  .arrow{
+     line-height: 0;
+      color: #fff;
+      background: #B0976D;
+      padding: 7px 26px 21px 26px;
+      font-size: 41px;
+      margin-left: 32px;
+  }
+
+  .bg_black{
+    background: black;
+  }
+  .padd{
+        padding-top: 90px;
+        padding-bottom: 90px;
+  }
+  .history_border{
+      padding-bottom: 15px;
+      border: 1px solid;
+      color: #B0976D;
+      padding-top: 15px;
+     
+  }
+  .italy{
+    background: #FFF;
+        background: #FFF;
+      padding: 94px 63px;
+  }
+  .italy_p{
+  font-family: 'Vidaloka';
+      font-size: 18px;
+      letter-spacing: 5px;
+      color: #B0976D;
+  }
+  .history_h3{
+    color: black;
+      font-size: 49px;
+      line-height: 1.2;
+      font-family: 'Vidaloka';
+  }
+  .divder{
+      width: 32%;
+      border-top: 2px double #B0976D;
+      color: #333;
+      height: 5px;
+      }
+  .ma_0{
+      margin-left: 0;
+  }
+  .history_par{  
+      line-height: 1.7;
+      color: #A7A7A7;
+      font-size: 17px;
+      margin-bottom: 66px;}
+
+  .history_read{
+      background: #000;
+      color: #fff;
+      padding: 23px 36px;
+      font-size: 16px;
+  }
+
+  .color_fff{
+    color: #fff;
+    font-family: 'Vidaloka';
+  }
+  .test_h3 {
+      font-size: 50px;
+  }
+  hr.test_hr {
+      width: 12%;
+      border-top: 2px double #ffffff;
+      color: #333;
+      height: 5px;
+  }
+  p.test_p {
+      font-size: 26px;
+      color: #B0976D;
+  }
+  p.test_p2 {
+      font-size: 23px;
+  }
+  hr.test_hr2 {
+      width: 14%;
+      border-top: 2px double #B0976D;
+      color: #333;
+      height: 5px;
+  }
+  .test-center {
+      margin: 0px 146px;
+  }
+  a.test_btn {
+      border: 2px solid #ffffffa6;
+      color: white;
+      padding: 17px 66px;
+      margin: 16px;
+      font-size: 23px;
+  }
+  .test_pm {
+      margin-top: 86px;
+      margin-bottom: 94px;
+  }
+
+  .testimonials {
+    background-size: cover;
+    background-position: center;
+    padding: 125px 0 116px;
+    background: url('https://imgur.com/8WtHiJU.png');
+  }
