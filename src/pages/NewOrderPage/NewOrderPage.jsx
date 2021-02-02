@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import VinoList from '../../components/VinoList/VinoList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
-
+import './NewOrderPage.css';
 
 
 export default function NewOrderPage({user, setUser}) {
@@ -18,17 +18,18 @@ export default function NewOrderPage({user, setUser}) {
 
   useEffect(function () {
     async function getItems() {
-      const items = await itemAPI.getAll();
-      categoriesRef.current = items.reduce((cats, item) => {
-        const cat = item.category.name;
+       const items = await itemAPI.getAll();
+
+      categoriesRef.current = items?.reduce((cats, item) => {
+        const cat = item?.category.name;
         return cats.includes(cat) ? cats : [...cats, cat];
       }, []);
       setVinoItems(items);
-      setActiveCat(items[0].category.name);
+      setActiveCat(items[0]?.category.name);
     }
     getItems();
 
-    // load the user's cart
+    // // load the user's cart
     async function getCart() {
       const cart = await ordersAPI.getCart();
       setCart(cart);
@@ -36,7 +37,7 @@ export default function NewOrderPage({user, setUser}) {
     getCart();
   }, []);
 
-  /*--- Event Handlers --- */
+  // /*--- Event Handlers --- */
   async function handleAddToOrder(itemId) {
     const cart = await ordersAPI.addItemToCart(itemId);
     setCart(cart);
