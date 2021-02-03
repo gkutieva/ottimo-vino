@@ -17,8 +17,8 @@ The ripeness and intensity of fruit for each wine depends on climate, grape vari
 
 
 # GETTING STARTED:  
-[Trello board](https://trello.com/b/wr0tSVSr/ottimo-vino-pjct-4)
-[Click here to browse the app]()
+[Trello board](https://trello.com/b/wr0tSVSr/ottimo-vino-pjct-4) | 
+[Click here to browse the app](https://ottimo-vino.herokuapp.com/)
 
 ### NEXT STEPS: 
 * Improving on the CSS 
