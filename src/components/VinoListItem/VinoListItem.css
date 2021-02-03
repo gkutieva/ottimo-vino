@@ -1,4 +1,4 @@
-.VinoListItem {
+/* .VinoListItem {
     width: 10%;
     display: flex;
     justify-content: space-between;
@@ -10,16 +10,16 @@
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
     font-size: 4vmin;
-  }
+  } */
   
-  .VinoListItem .image {
-    height: 8vw;
-    width: 8vw;
+  /* .VinoListItem .image {
+    height: 2vw;
+    width: 2vw;
     font-size: 4vw;
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
-  }
+  } */
   
   .VinoListItem .buy {
     display: flex;
@@ -45,3 +45,14 @@
   } */
 
  
+/* .wine-pictures {
+  height: 5px;
+  width: 5px;
+} */
+
+.imgage {
+  float: left;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+}

@@ -1,0 +1,47 @@
+#product{
+    text-align: center;
+    display: inline-block;
+    
+  }
+  .had-pro-col{
+        background-color: #b0976d;
+     color: white;
+     font-family: 'Vidaloka', serif;
+     padding: 15px ;
+     margin-top: 40px;
+     margin-bottom: 10px;
+  }
+  
+  #pro-1{
+    background-color: #e9e9e945;
+    margin: 0 160px;
+    text-align: center;
+    padding: 50px 0;
+     }
+      .pro_total{
+        color: #8d7342;
+       }
+       .fa-icon{
+         font-size: 30px;
+       }
+       .steve{
+         font-weight: 1000;
+       }.waiter{
+         font-size: 20px;
+       }
+   
+  hr{
+    height:2px;
+    background-color:gray
+  }
+  
+  /*subtottal*/
+  .sub-total{
+    text-align: right;
+  }
+  .sub{
+    color: #8d7342;
+  }
+  .button-4 .subbtn{
+    color: black;
+  } 

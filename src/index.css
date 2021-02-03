@@ -1,29 +1,19 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-
 :root {
-  /* Colors */
-  --bgc-01: #43455c;
-  --bgc-02: #3c3f58;
-  --bgc-03: #707793;
-  --bgc-04: whitesmoke;
-  --txt-01: #3bba9c;
-  --txt-02: #707793;
-  /* Fonts */
-  --fnt-01: "Jura";
-  --fnt-02: "Varela";
+  --white: #FFFFFF;
+  --tan-1: #522929;
+  --tan-2: #E7E2DD;
+  --tan-3: #dd2232;
+  --tan-4: #ffffff;
+  --orange: #522929;
+  --text-light: #968c84;
+  --text-dark: #615954;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -31,16 +21,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
-  padding: 2vmin;
-  height: 100vh;
-  font-family: var(--fnt-02), "Roboto", "Ubuntu", sans-serif;
-  line-height: 1.618;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+  padding: 2vmin; 
+  height: 100vh; 
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -88,8 +71,8 @@ code {
   background-color: var(--tan-1);
   color: var(--text-dark);
   border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-  padding: .6vmin;
+  /* border-radius: 1vmin; */
+  /* padding: .6vmin; */
   text-align: center;
   font-size: 2vmin;
 }
@@ -134,7 +117,7 @@ input:focus {
 }
 
 button, a.button {
-  /* margin: 1vmin;
+  margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
   background-color: var(--orange);
@@ -145,62 +128,29 @@ button, a.button {
   border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
   outline: none;
-  cursor: pointer; */
-  background-color: var(--bgc-03);
-  max-width: 30vmin;
-  font-family: var(--txt-01);
-  padding: 2vmin 1vmin;
-  border-radius: 2vmin;
-  outline: none;
-  margin:  10px;
+  cursor: pointer;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
   padding: .6vmin .8vmin;
-  background-color: var(--bgc-03);
-  max-width: 30vmin;
-  font-family: var(--txt-01);
-  padding: 2vmin 1vmin;
-  border-radius: 2vmin;
-  outline: none;
-  margin:  10px;
 }
 
 button.btn-xs {
-  background-color: var(--bgc-03);
-  max-width: 30vmin;
-  font-family: var(--txt-01);
-  padding: 2vmin 1vmin;
-  border-radius: 2vmin;
-  outline: none;
-  margin:  10px;
+  font-size: 1vmin;
+  padding: .4vmin .5vmin;
 }
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  /* background-color: var(--tan-4); */
-  background-color: var(--bgc-03);
-  max-width: 30vmin;
-  font-family: var(--txt-01);
-  padding: 2vmin 1vmin;
-  border-radius: 2vmin;
-  outline: none;
-  margin:  10px;
-
+  background-color: var(--tan-4);
 }
 
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
-  background-color: var(--bgc-03);
-  max-width: 30vmin;
-  font-family: var(--txt-01);
-  padding: 2vmin 1vmin;
-  border-radius: 2vmin;
-  outline: none;
-  margin:  10px;
 }
+
 
 .navbar{
   background-color: grey darken-2;
