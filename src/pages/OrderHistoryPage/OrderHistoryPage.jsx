@@ -1,16 +1,29 @@
-import * as usersService from '../../utilities/users-service';
+import {useState, useEffect} from 'react';
+import * as ordersAPI from '../../utilities/orders-api';
+
 
 export default function OrderHistoryPage() {
-
-  async function handleCheckToken() {
-    const expDate = await usersService.checkToken();
-    console.log(expDate);
-  }
+  const [pastOrders, setPastOrders] = useState(null);
+  useEffect(() => {
+    ordersAPI.getPastOrders().then(res => setPastOrders(res));
+  }, []) 
+ 
 
   return (
     <>
-      <h1>OrderHistoryPage</h1>
-      <button onClick={handleCheckToken}>You Have No Orders</button>
+      {
+        pastOrders && (
+          <div>
+            <h1>Here are all your past orders</h1>
+            {pastOrders.map((order, idx) => (
+              <div>
+                {order.orderTotal}
+              </div>
+            ))}
+          </div>
+        )
+      }
+     
     </>
   );
 }

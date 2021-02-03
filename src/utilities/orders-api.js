@@ -26,3 +26,6 @@ export function checkout() {
   return sendRequest(`${BASE_URL}/cart/checkout`, 'POST');
 }
 
+export function getPastOrders() {
+  return sendRequest(BASE_URL);
+}

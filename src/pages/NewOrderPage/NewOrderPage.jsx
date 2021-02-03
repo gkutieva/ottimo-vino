@@ -51,7 +51,7 @@ export default function NewOrderPage({user, setUser}) {
 
   async function handleCheckout() {
     await ordersAPI.checkout();
-    history.push('/address');
+    history.push('/orders');
   }
 
   return (

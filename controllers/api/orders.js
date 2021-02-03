@@ -5,8 +5,16 @@ module.exports = {
     addToCart,
     updateCart,
     setItemQtyInCart,
-    checkout
+    checkout,
+    getPastOrders
 
+}
+
+async function getPastOrders(req, res) {
+  const orders = await Order.find(
+    {user: req.user._id, isPaid: true}
+  );
+  res.json(orders);
 }
 
 async function cart(req, res) {
@@ -42,7 +50,7 @@ async function setItemQtyInCart(req, res) {
     // Update the cart's isPaid property to true
     const cart = await Order.getCart(req.user._id);
     cart.isPaid = true;
-    await cart.save(); 
+    cart.save(); 
     res.json(cart);
   }
   

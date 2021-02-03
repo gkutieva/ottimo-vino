@@ -2,10 +2,10 @@
 .banner{
     position: relative;
     background: url("https://imgur.com/PB3D3ne.png");
-    min-height: 90vh;
+    min-height: 80vh;
     background-size: cover;
     background-position: center;
-    padding: 200px 0 200px;
+    padding: 100px 0 100px;
     
 
 }
@@ -19,9 +19,15 @@
     border: none;
   }
   
+  .ot {
+    font-weight: 500;
+    font-family: 'Vidaloka', serif;
+    color: rgb(119, 10, 10);
+    
+  }
 
 .harmony{
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'Vidaloka', serif;   
   }
 
@@ -36,17 +42,18 @@
 .harmony_shop{
     color: #B0976D;
       padding: 25px 0px 25px 38px;
-      font-size: 23px;   
+      font-size: 25px;   
       background: #000;
+      text-align: center;
   }
-  .arrow{
+  /* .arrow{
      line-height: 0;
       color: #fff;
       background: #B0976D;
       padding: 7px 26px 21px 26px;
       font-size: 41px;
       margin-left: 32px;
-  }
+  } */
 
   .bg_black{
     background: black;
